@@ -74,17 +74,28 @@ unset INSTALL_DIR
 
 
 
-## Dataset
-Please refer to [DATASET](DATASET.md).
+## Tasks
+### Visual Grounding
 
-## CPT
+Visual Grounding task is to find the visual region corresponding to a query sentence e.g.: the black horse.
 
-All commands of training are saved in the directory `cmds/`. The directory of `cmds` looks like:
+#### Data
 
-```python
-cmds/  
+Please download the data first.
 
-```
+#### Configuration
+
+Before
+
+#### Feature Extraction
+
+#### CPT Inference
+
+#### Evaluation
+
+
+
+
 
 ## Bugs or questions?
 If you have any questions related to the code or the paper, feel free to email Ao Zhang (`zhanga6@outlook.com`). If you encounter any problems when using the code, or want to report a bug, you can open an issue. Please try to specify the problem with details so we can help you better and quicker!
