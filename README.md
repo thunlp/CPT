@@ -319,7 +319,7 @@ bash cmds/vg/prepare.sh # make sure you have at least 4 GPUs
 
 To modify the code to single GPU or other amount. Please go to `prompt_feat/cmds/vg/_vg_val.sh and _vg_test.sh`, and modify `CUDA_VISIBLE_DEVICES`, `--nproc_per_node` and `TEST.IMS_PER_BATCH` correspondingly.
 
-"""After the feature extraction, the file structure will be like:
+After the feature extraction, the file structure will be like:
 
 ```python
 
