@@ -1,0 +1,13 @@
+CUDA_VISIBLE_DEVICES=$1 python -m torch.distributed.launch \
+	--master_port 1009$1 --nproc_per_node=1  oscar/fewshot/refcoco_cpt.py \
+	--model_name_or_path output/refcoco/fsl/cpt/refcocog/"$1"/final \
+	--eval_model_dir output/refcoco/fsl/cpt/refcocog/"$1"/final \
+	--do_train --test_mode True \
+	--train_dir ../prompt_feat/output/refcoco/cpt/$1/inference/refcocog_train/ \
+	--test_dir ../prompt_feat/output/refcoco/cpt/inference/refcocog_test/ \
+	--do_lower_case \
+	--add_od_labels \
+	--per_gpu_train_batch_size 8 \
+	--per_gpu_eval_batch_size 4 \
+	--tie_weights \
+	--freeze_embedding
