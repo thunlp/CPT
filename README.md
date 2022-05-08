@@ -15,10 +15,10 @@ This is the code for paper "[CPT: Colorful Prompt Tuning for Pre-trained Vision-
 * [Preparation](#preparation)
 
 * [Tasks](#tasks)
-    * [Visual Grounding](#vground)
-    * [GQA](#gqa)
-    * [VCR (Visual Commonsense Reasoning)](#vcr)
-    * [VG (Visual Genome)](#vg)
+    * [1. Visual Grounding](#visual-grounding)
+    * [2. GQA](#gqa)
+    * [3. VCR (Visual Commonsense Reasoning)](#vcr)
+    * [4. VG (Visual Genome)](#vg)
 * [Bugs or questions?](#bugs-or-questions)
 
 * [Acknowledgement](#acknowledgement)
@@ -96,7 +96,7 @@ prompt_feat/models/vinvl/vinvl_vg_x152c4.pth
 
 
 ## Tasks
-### Visual Grounding
+### 1. Visual Grounding
 
 Visual Grounding task is to find the visual region corresponding to a query sentence *e.g.: the black horse*.
 
@@ -161,7 +161,7 @@ python eval/refcoco/fewshot_eval.py
 ```
 
 
-### GQA
+### 2. GQA
 
 GQA is a QA dataset, required reasoning ability.
 
@@ -225,7 +225,7 @@ cd Oscar
 bash eval/gqa/show.sh
 ```
 
-### VCR (Visual Commonsense Reasoning)
+### 3. VCR (Visual Commonsense Reasoning)
 
 VCR is a multiple-choice QA dataset, including `question->answer`, `quesntion+answer->rationale` and `question->answer+rationale` tasks.
 
@@ -301,7 +301,7 @@ bash eval/vcr/show.sh
 ```
 
 
-### VG (Visual Genome)
+### 4. VG (Visual Genome)
 
 VG is a visual relation detection dataset. The model should detect relational triplet in images.
 
