@@ -1,8 +1,8 @@
-cd data
+
 if [ ! -d "data" ]; then
   mkdir data
 fi
-
+cd data
 # download annotations
 if [ ! -d "gqa" ]; then
   wget https://thunlp.oss-cn-qingdao.aliyuncs.com/cpt-gqa.tar.gz
