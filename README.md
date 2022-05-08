@@ -24,7 +24,7 @@ This is the code for paper "[CPT: Colorful Prompt Tuning for Pre-trained Vision-
 * [Acknowledgement](#acknowledgement)
 
 ## Overview
-![alt text](demo/teaser.pdf "Illustration of CPT")
+![alt text](demo/teaser.png "Illustration of CPT")
 
 The code is based on two sub-repos. The prompt-feat is used to extract visual features with the help of pre-trained object detector. The Oscar is the pre-trained vision and language model to conduct inference.
 
