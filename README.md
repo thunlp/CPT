@@ -167,12 +167,6 @@ GQA is a QA dataset, required reasoning ability.
 
 #### Data
 
-**Note:** all the data will be downloaded at the `data` directory. If you want to download it at somewhere else, you can create a soft link:
-
-```sh
-ln -s your_data_path data
-```
-
 Please download the data first.
 
 ```sh
@@ -230,12 +224,6 @@ bash eval/gqa/show.sh
 VCR is a multiple-choice QA dataset, including `question->answer`, `quesntion+answer->rationale` and `question->answer+rationale` tasks.
 
 #### Data
-
-**Note:** all the data will be downloaded at the `data` directory. If you want to download it at somewhere else, you can create a soft link:
-
-```sh
-ln -s your_data_path data
-```
 
 Please download the data first.
 
@@ -306,12 +294,6 @@ bash eval/vcr/show.sh
 VG is a visual relation detection dataset. The model should detect relational triplet in images.
 
 #### Data
-
-**Note:** all the data will be downloaded at the `data` directory. If you want to download it at somewhere else, you can create a soft link:
-
-```sh
-ln -s your_data_path data
-```
 
 Please download the data first.
 
