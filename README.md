@@ -116,12 +116,6 @@ Please download the data first.
 bash cmds/prepare_data/download_refcoco.sh
 ```
 
-After downloading, there should be:
-
-```python
-
-```
-
 #### Feature Extraction
 
 To extract features:
@@ -134,11 +128,6 @@ bash cmds/refcoco/prepare.sh # make sure you have at least 4 GPUs
 
 To modify the code to single GPU or other amount. Please go to `prompt_feat/cmds/refcoco/cpt`, and modify `CUDA_VISIBLE_DEVICES`, `--nproc_per_node` and `TEST.IMS_PER_BATCH` correspondingly.
 
-After the feature extraction, the file structure will be like:
-
-```python
-
-```
 
 #### CPT Inference
 
@@ -173,11 +162,6 @@ Please download the data first.
 bash cmds/prepare_data/download_gqa.sh
 ```
 
-After downloading, there should be:
-
-```python
-
-```
 
 #### Feature Extraction
 
@@ -191,11 +175,6 @@ bash cmds/gqa/prepare.sh # make sure you have at least 4 GPUs
 
 To modify the code to single GPU or other amount. Please go to `prompt_feat/cmds/gqa/*.sh`, and modify `CUDA_VISIBLE_DEVICES`, `--nproc_per_node` and `TEST.IMS_PER_BATCH` correspondingly.
 
-After the feature extraction, the file structure will be like:
-
-```python
-
-```
 
 #### CPT Inference
 
@@ -231,11 +210,6 @@ Please download the data first.
 bash cmds/prepare_data/download_vcr.sh
 ```
 
-After downloading, there should be:
-
-```python
-
-```
 
 #### Feature Extraction
 
@@ -249,11 +223,6 @@ bash cmds/vcr/prepare.sh # make sure you have at least 4 GPUs
 
 To modify the code to single GPU or other amount. Please go to `prompt_feat/cmds/vcr/pt_vcr_val_seg and cpt_vcr_val_seg`, and modify `CUDA_VISIBLE_DEVICES`, `--nproc_per_node` and `TEST.IMS_PER_BATCH` correspondingly.
 
-After the feature extraction, the file structure will be like:
-
-```python
-
-```
 
 #### CPT Inference
 
@@ -301,11 +270,6 @@ Please download the data first.
 bash cmds/prepare_data/download_vg.sh
 ```
 
-After downloading, there should be:
-
-```python
-
-```
 
 #### Feature Extraction
 
@@ -319,11 +283,6 @@ bash cmds/vg/prepare.sh # make sure you have at least 4 GPUs
 
 To modify the code to single GPU or other amount. Please go to `prompt_feat/cmds/vg/_vg_val.sh and _vg_test.sh`, and modify `CUDA_VISIBLE_DEVICES`, `--nproc_per_node` and `TEST.IMS_PER_BATCH` correspondingly.
 
-After the feature extraction, the file structure will be like:
-
-```python
-
-```
 
 #### CPT Inference
 
