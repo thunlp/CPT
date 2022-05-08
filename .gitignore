@@ -1,0 +1,191 @@
+# Initially taken from Github's Python gitignore file
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+prompt_feat/.Python
+prompt_feat/build/
+prompt_feat/develop-eggs/
+prompt_feat/dist/
+prompt_feat/downloads/
+prompt_feat/eggs/
+prompt_feat/.eggs/
+prompt_feat/lib/
+prompt_feat/lib64/
+prompt_feat/parts/
+prompt_feat/sdist/
+prompt_feat/var/
+prompt_feat/wheels/
+prompt_feat/*.egg-info/
+prompt_feat/.installed.cfg
+*.egg
+prompt_feat/MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+prompt_feat/pip-log.txt
+prompt_feat/pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+prompt_feat/htmlcov/
+prompt_feat/.tox/
+prompt_feat/.nox/
+prompt_feat/.coverage
+prompt_feat/.coverage.*
+prompt_feat/.cache
+prompt_feat/nosetests.xml
+prompt_feat/coverage.xml
+prompt_feat/*.cover
+prompt_feat/.hypothesis/
+prompt_feat/.pytest_cache/
+
+# Translations
+*.mo
+*.pot
+
+# Django stuff:
+*.log
+prompt_feat/local_settings.py
+prompt_feat/db.sqlite3
+
+# Flask stuff:
+prompt_feat/instance/
+prompt_feat/.webassets-cache
+
+# Scrapy stuff:
+prompt_feat/.scrapy
+
+# Sphinx documentation
+prompt_feat/docs/_build/
+
+# PyBuilder
+prompt_feat/target/
+
+# Jupyter Notebook
+prompt_feat/.ipynb_checkpoints
+
+# IPython
+prompt_feat/profile_default/
+prompt_feat/ipython_config.py
+
+# pyenv
+prompt_feat/.python-version
+
+# celery beat schedule file
+prompt_feat/celerybeat-schedule
+
+# SageMath parsed files
+*.sage.py
+
+# Environments
+prompt_feat/.env
+prompt_feat/.venv
+prompt_feat/env/
+prompt_feat/venv/
+prompt_feat/ENV/
+prompt_feat/env.bak/
+prompt_feat/venv.bak/
+
+# Spyder project settings
+prompt_feat/.spyderproject
+prompt_feat/.spyproject
+
+# Rope project settings
+prompt_feat/.ropeproject
+
+# mkdocs documentation
+/site
+
+# mypy
+prompt_feat/.mypy_cache/
+prompt_feat/.dmypy.json
+prompt_feat/dmypy.json
+
+# Pyre type checker
+prompt_feat/.pyre/
+
+# vscode
+prompt_feat/.vscode
+
+# TF code
+prompt_feat/tensorflow_code
+
+# Models
+prompt_feat/models
+prompt_feat/proc_data
+
+# examples
+prompt_feat/runs
+prompt_feat/examples/runs
+
+# pyCharm
+prompt_feat/.idea/
+
+# local folders
+prompt_feat/data
+prompt_feat/models
+prompt_feat/output
+
+data
+models
+output
+tmp
+
+
+# compilation and distribution
+__pycache__
+_ext
+*.pyc
+*.so
+maskrcnn_benchmark.egg-info/
+build/
+dist/
+
+# pytorch/python/numpy formats
+*.pth
+*.pkl
+*.npy
+
+# ipython/jupyter notebooks
+*.ipynb
+**/.ipynb_checkpoints/
+
+# Editor temporaries
+*.swn
+*.swo
+*.swp
+*~
+
+# Pycharm editor settings
+Oscar/.idea
+
+# vscode editor settings
+Oscar/.vscode
+
+# MacOS
+Oscar/.DS_Store
+
+# project dirs
+Oscar/datasets
+Oscar/models
+Oscar/output
+Oscar/exps
+Oscar/.ptconfig
+Oscar/.ptignore
+Oscar/pretrained_model/
+Oscar/run_philly.py
+Oscar/vrd_philly_tools_submit.yaml
+Oscar/tmp/
+Oscar/transformers
+Oscar/coco_caption
