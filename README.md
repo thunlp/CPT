@@ -86,7 +86,7 @@ bash cmds/prepare_data/download_checkpoints.sh
 
 After downloading, there should be:
 
-```python
+```
 Oscar/pretrained_models/image_captioning/pretrained_base/pytorch_model.bin
 prompt_feat/models/vinvl/vinvl_vg_x152c4.pth
 ```
