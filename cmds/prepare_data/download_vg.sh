@@ -12,7 +12,7 @@ fi
 
 
 # download images
-cd vcr
+cd vg
 if [ ! -d "VG_100K" ]; then
   wget https://cs.stanford.edu/people/rak248/VG_100K_2/images.zip
   wget https://cs.stanford.edu/people/rak248/VG_100K_2/images2.zip
