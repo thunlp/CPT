@@ -1,0 +1,4 @@
+ann_root: ../data/refcoco # CPT/data/refcoco
+ann: split/finetune_refcocog_val.json
+det: detections/refcocog/segs.json
+image_root: ../data/refcoco/train2014

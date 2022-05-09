@@ -1,0 +1,4 @@
+ann_root: ../data/refcoco # CPT/data/refcoco
+ann: split/finetune_refcocog_train.json # root path is ann_root
+det: detections/refcocog/segs.json # root path is ann_root
+image_root: ../data/refcoco/train2014

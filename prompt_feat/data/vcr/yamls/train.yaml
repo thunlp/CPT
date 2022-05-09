@@ -1,0 +1,6 @@
+ann_root: ../data/vcr
+ann: vcr_train.json # root path is ann_root
+det: objects.json # root path is ann_root
+to_mark: to_mark_dets.json
+seg: to_mark_segs.json
+image_root: ../data/vcr

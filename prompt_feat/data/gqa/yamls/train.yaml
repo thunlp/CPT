@@ -1,0 +1,5 @@
+ann_root: /data_local/zhangao/data/gqa
+ann: gqa_all_qla_train_sub.json # root path is ann_root
+det: objects.json # root path is ann_root
+to_mark: train_to_mark.json
+image_root: ../data/gqa/images

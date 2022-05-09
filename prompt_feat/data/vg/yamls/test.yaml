@@ -1,0 +1,4 @@
+ann_root: ../data/vg/
+vocab: vg.json 
+ann: vg_test.pk
+image_root: ../data/vg/VG_100K/
