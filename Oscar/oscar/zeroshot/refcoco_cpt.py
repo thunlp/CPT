@@ -22,7 +22,6 @@ from tqdm import tqdm
 import torch.optim as optim
 from torch import nn
 from transformers.pytorch_transformers.modeling_bert import BertLayerNorm
-from oscar.datasets.mlm_dataset import RefCOCOTSVDataset
 from oscar.utils.comm import all_gather, gather_on_master, reduce_dict
 from oscar.utils.iou import computeIoU
 from oscar.utils.optim_sched import get_lr_sched
@@ -446,9 +445,9 @@ def main():
     config.max_img_seq_length = args.max_img_seq_length
     model = REC_MLM_CPT(config)
     model.copy_from_pretraining_model(tmp)
-    if args.test_mode:
-        del model
-        model = REC_MLM_CPT.from_pretrained(checkpoint, config=config)
+    #if args.test_mode:
+    #    del model
+    #    model = REC_MLM_CPT.from_pretrained(checkpoint, config=config)
     model.to(args.device)
 
     # distributed
