@@ -3,6 +3,9 @@ GPU=0
 #bash cmds/refcoco/prepare.sh
 #cd ../Oscar
 
+mkdir -p results/refcoco/fsl/0/refcoco/
+mkdir -p results/refcoco/fsl/0/refcoco+/
+mkdir -p results/refcoco/fsl/0/refcocog/
 bash cmds/refcoco/zsl/refcoco.sh > results/refcoco/fsl/0/refcoco/0
 bash cmds/refcoco/zsl/refcoco+.sh > results/refcoco/fsl/0/refcoco+/0
 bash cmds/refcoco/zsl/refcocog.sh > results/refcoco/fsl/0/refcocog/0
