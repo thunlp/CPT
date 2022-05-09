@@ -50,6 +50,7 @@ cd $INSTALL_DIR
 git clone https://github.com/NVIDIA/apex.git
 cd apex
 python setup.py install --cuda_ext --cpp_ext
+cd ..
 
 # install requirements
 pip install -r requirements.txt
@@ -57,21 +58,21 @@ pip install -r requirements.txt
 # install prompt_feat
 cd prompt_feat
 python setup.py build develop
+cd ..
 
 # install oscar
 cd Oscar
 # install transformers
-git clone git@github.com:huggingface/transformers.git
+git clone https://github.com/huggingface/transformers.git
 cd transformers
 git reset --hard 067923d3267325f525f4e46f357360c191ba562e
 cd ..
 # install coco_caption
-git clone git@github.com:LuoweiZhou/coco-caption.git
-cd coco_caption
+git clone https://github.com/LuoweiZhou/coco-caption.git
+cd coco-caption
 git reset --hard de6f385503ac9a4305a1dcdc39c02312f9fa13fc
 # ./get_stanford_models.sh
 cd ..
-
 python setup.py build develop
 
 unset INSTALL_DIR
