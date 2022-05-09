@@ -137,10 +137,10 @@ prompt_feat/data
 prompt_feat/models
 prompt_feat/output
 
-data
-models
-output
-tmp
+./data
+./models
+./output
+./tmp
 
 
 # compilation and distribution
