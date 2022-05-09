@@ -133,7 +133,6 @@ prompt_feat/examples/runs
 prompt_feat/.idea/
 
 # local folders
-prompt_feat/data
 prompt_feat/models
 prompt_feat/output
 
