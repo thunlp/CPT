@@ -66,7 +66,7 @@ class ZSLColorFinetuneDataset(Dataset):
         if "color_val" in data_file and "val" in data_file:
             ann_name = ann_name.replace("val", "train")
         #root_path = data_file.split("output")[0] + "data/refcoco/"
-	root_path = "../data/refcoco/"
+        root_path = "../data/refcoco/"
         ann_path = os.path.join(root_path+"split/", ann_name)
         self.anns_dic = json.load(open(ann_path))
         self.anns_dic = {str(d["id"]): d for d in self.anns_dic}
