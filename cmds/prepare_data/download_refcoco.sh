@@ -6,8 +6,8 @@ cd data
 # download annotations
 if [ ! -d "refcoco" ]; then
   wget https://thunlp.oss-cn-qingdao.aliyuncs.com/cpt-refcoco.tar.gz
-  tar xzvf refcoco.tar.gz
-  rm refcoco.tar.gz
+  tar xzvf cpt-refcoco.tar.gz
+  rm cpt-refcoco.tar.gz
 fi
 
 
