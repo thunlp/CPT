@@ -4,7 +4,7 @@ CUDA_VISIBLE_DEVICES=$3 python -m torch.distributed.launch \
 	--eval_model_dir pretrained_models/image_captioning/pretrained_base \
 	--do_train \
 	--train_dir ../prompt_feat/output/refcoco/cpt/$3/inference/refcocog_train/ \
-	--test_dir ../prompt_feat/output/refcoco/cpt/inference/refcocog_testA/ \
+	--test_dir ../prompt_feat/output/refcoco/cpt/inference/refcocog_test/ \
 	--do_lower_case \
 	--add_od_labels \
 	--learning_rate 3e-5 \
