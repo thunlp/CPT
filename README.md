@@ -147,7 +147,7 @@ To evaluate, please run:
 
 ```sh
 cd Oscar
-python eval/refcoco/fewshot_eval.py
+python eval/refcoco/fewshot_eval.py results/refcoco/fsl/
 ```
 
 
