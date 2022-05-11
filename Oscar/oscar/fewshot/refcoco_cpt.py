@@ -22,7 +22,6 @@ from tqdm import tqdm
 import torch.optim as optim
 from torch import nn
 from transformers.pytorch_transformers.modeling_bert import BertLayerNorm
-from oscar.datasets.mlm_dataset import RefCOCOTSVDataset
 from oscar.utils.comm import all_gather, gather_on_master, reduce_dict
 from oscar.utils.iou import computeIoU
 from oscar.utils.optim_sched import get_lr_sched
@@ -175,14 +174,14 @@ def test_collate(batch):
 def build_test_dataset(data_file, tokenizer, args):
     if not op.isfile(data_file):
         data_file = op.join(args.test_dir, data_file)
-        assert op.isfile(data_file)
+        assert op.isfile(data_file), data_file
     return RefcocoCPTDataset(data_file, tokenizer=tokenizer, args=args)
 
 
 def build_train_dataset(data_file, tokenizer, args):
     if not op.isfile(data_file):
         data_file = op.join(args.train_dir, data_file)
-        assert op.isfile(data_file)
+        assert op.isfile(data_file), data_file
     return RefcocoCPTDataset(data_file, tokenizer=tokenizer, is_train=True, args=args)
 
 def make_data_sampler(dataset, shuffle, distributed):
