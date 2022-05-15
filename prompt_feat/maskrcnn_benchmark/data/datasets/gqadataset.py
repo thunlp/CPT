@@ -127,7 +127,7 @@ class GQAColorDataset(object):
 
     def __getitem__(self, idx):
         ann = self.anns[idx]
-        img_path = ann["img_path"]
+        img_path = os.path.join(self.image_root, ann["img_path"])
         img = Image.open(img_path).convert("RGB")
         img_size = img.size  # w, h
 
