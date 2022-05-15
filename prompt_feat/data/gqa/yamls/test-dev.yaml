@@ -1,4 +1,4 @@
-ann_root: /data_local/zhangao/data/gqa
+ann_root: ../data/gqa
 ann: gqa_bal_qla_testdev.json # root path is ann_root
 det: objects.json # root path is ann_root
 to_mark: to_mark.json
