@@ -6,3 +6,9 @@ scikit-image
 anytree
 regex
 boto3
+yacs
+opencv-python
+pycocotools
+cityscapesscripts
+timm
+einops
