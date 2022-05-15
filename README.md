@@ -15,10 +15,10 @@ This is the code for paper "[CPT: Colorful Prompt Tuning for Pre-trained Vision-
 * [Preparation](#preparation)
 
 * [Tasks](#tasks)
-    * [1. Visual Grounding](#visual-grounding)
-    * [2. GQA](#gqa)
-    * [3. VCR (Visual Commonsense Reasoning)](#vcr)
-    * [4. VG (Visual Genome)](#vg)
+    * [1. Visual Grounding](#1.-visual-grounding)
+    * [2. GQA](#2.-GQA)
+    * [3. VCR (Visual Commonsense Reasoning)](#3.-VCR-(Visual-Commonsense-Reasoning))
+    * [4. VG (Visual Genome)](#4.-VG-(Visual-Genome))
 * [Bugs or questions?](#bugs-or-questions)
 
 * [Acknowledgement](#acknowledgement)
