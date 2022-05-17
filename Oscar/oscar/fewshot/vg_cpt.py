@@ -1,34 +1,25 @@
 # Copyright (c) 2021 Microsoft Corporation. Licensed under the MIT license.
 
 import argparse
+import json
 import os
 import os.path as op
+import pickle
 
-import numpy as np
-import base64
 import torch
 import torch.distributed as dist
-from transformers.pytorch_transformers import BertTokenizer, BertConfig
-import random
-from oscar.utils.tsv_file import TSVFile
+import torch.optim as optim
+from oscar.datasets.vg_cpt_dataset import FtVGDataset
+from oscar.datasets.vg_test_dataset import ZSLVGDataset
 from oscar.modeling.modeling_bert import BertImgForPreTraining
+from oscar.modeling.modeling_rec import REC_MLM_CPT
+from oscar.utils.comm import all_gather
 from oscar.utils.logger import setup_logger
 from oscar.utils.misc import (mkdir, set_seed)
-from oscar.datasets.vg_test_dataset import ZSLVGDataset
-from oscar.datasets.vg_cpt_dataset import FtVGDataset
-from oscar.modeling.modeling_rec import REC_MLM_CPT
-import pickle
-import json
-from tqdm import tqdm
-import torch.optim as optim
-from torch import nn
-from transformers.pytorch_transformers.modeling_bert import BertLayerNorm
-from oscar.datasets.mlm_dataset import RefCOCOTSVDataset
-from oscar.utils.comm import all_gather, gather_on_master, reduce_dict
-from oscar.utils.iou import computeIoU
 from oscar.utils.optim_sched import get_lr_sched
-from oscar.utils.save_model import save_model
 from oscar.utils.vg_eval import eval_vg
+from tqdm import tqdm
+from transformers.pytorch_transformers import BertTokenizer, BertConfig
 
 
 def get_evaluate_file(predict_file):
