@@ -4,6 +4,8 @@ This is the code for paper "[CPT: Colorful Prompt Tuning for Pre-trained Vision-
 
 ## Recent Updates
 - [x] 2022.05.06 Initialize CPT for grounding, VRD, GQA, and VCR codes.
+- [x] 2022.05.15 Test CPT code for grounding, GQA, and VCR tasks.
+- [x] 2022.05.19 Test CPT code for VRD.
 
 
 ## Quick links
