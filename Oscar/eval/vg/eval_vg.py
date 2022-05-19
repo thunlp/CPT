@@ -37,6 +37,9 @@ def eval(gts, preds):
         prds = [p['pred'] for p in p_list]
         pairs = torch.tensor(pairs)
         prds = torch.stack(prds, 0).softmax(1)
+        # avoid difference with different torch version
+        if (prds[:, 48] == prds[:, 49]).all():
+            prds[:, 49] += 1e-5
         rels = prds[:, 1:].argmax(1) + 1
         scores = prds[torch.arange(len(prds)), rels]
         idxs = scores.argsort(descending=True)
