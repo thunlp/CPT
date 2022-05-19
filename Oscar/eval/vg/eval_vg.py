@@ -111,7 +111,7 @@ for fsl_shot_dir in fsl_shot_dir_list:
         if os.path.exists(val_path):
             val_pred = torch.load(val_path)
             val_rsts.append(eval(val_gts, val_pred))
-            print(val_rsts[-1])
+            # print(val_rsts[-1])
 
         test_path = os.path.join(per_seed_path, "test.pt")
         if os.path.exists(test_path):

@@ -302,7 +302,7 @@ def val(args, data_loader, model, tokenizer, gt_path):
         logger.info(rst)
         if not os.path.exists(args.result_dir):
             os.makedirs(args.result_dir)
-        save_name = "val" if "val" in args.annotation else "test"
+        save_name = "val" if "val" in gt_path else "test"
         torch.save(predictions, os.path.join( args.result_dir, save_name+".pt"))
 
 def build_optimizer(model, opts):
