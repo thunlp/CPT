@@ -305,7 +305,7 @@ To evaluate, please run:
 
 ```sh
 cd Oscar
-bash eval/vg/eval_vg.py
+bash eval/vg/eval_vg.py results/vg/cpt/
 ```
 
 
