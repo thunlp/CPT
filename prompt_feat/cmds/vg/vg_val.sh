@@ -4,5 +4,5 @@ rm -rf output/vg/val/inference/
 
 for i in 0 1 2 3 4
 do
-        sh cmds/vg/_vg_val.sh 5 $i
+        bash cmds/vg/_vg_val.sh 5 $i
 done

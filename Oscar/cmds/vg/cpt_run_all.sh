@@ -1,4 +1,4 @@
-GPU=$1
+GPU=0
 
 # zero shot
 bash cmds/vg/_fsl.sh $GPU 0 0
