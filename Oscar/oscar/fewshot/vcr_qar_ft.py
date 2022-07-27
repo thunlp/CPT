@@ -343,7 +343,7 @@ class VCRDataset(Dataset):
 
 
 def _decode_label(label):
-    return label//4, label%4
+    return label[0], label[1]
 
 
 def vcr_collate_fn(raw_batch):
@@ -422,7 +422,7 @@ def train(args, train_dataset, eval_dataset, model, tokenizer):
 
     # Distributed training (should be after apex fp16 initialization)
     if args.local_rank != -1:
-        model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.local_rank], output_device=args.local_rank, find_unused_parameters=True)
+        model = torch.nn.parallel.DistributedDataParallel(model, device_ids=[args.local_rank], output_device=args.local_rank, find_unused_parameters=False)
 
     # Train!
     logger.info("***** Running training *****")
@@ -466,7 +466,7 @@ def train(args, train_dataset, eval_dataset, model, tokenizer):
                 t.to(args.device) for t in batch_qa_r[:-3])
             qa_r_q_ids, qa_r_labels = batch_qa_r[-3], batch_qa_r[-2]
             qa_r_cls_labels = torch.ones([len(qa_r_labels)], dtype=qa_r_input_ids.dtype, device=qa_r_input_ids.device)
-            for i, lb in enumerate(q_a_labels[::n_rats]):
+            for i, lb in enumerate(qa_r_labels[::n_rats]):
                 qa_r_cls_labels[i * n_rats + lb] = 0
 
             # k = 0
@@ -486,7 +486,7 @@ def train(args, train_dataset, eval_dataset, model, tokenizer):
                           # XLM don't use segment_ids
                           'next_sentence_label': qa_r_cls_labels,
                           'img_feats': None if args.img_feature_dim == -1 else qa_r_img_feats,
-                          "head": "ans"}
+                          "head": "rat"}
             qa_r_outputs = model(**qa_r_inputs)
             qa_r_loss, qa_r_logits = qa_r_outputs[:2]
 

@@ -462,8 +462,10 @@ class VCR_QAR_Processor(DataProcessor):
             answers, rations = line['answers'], line["rationales"]
             choices = [answers, rations]
 
-            label = None if set_type.startswith('test') else line['answer_label'] * 4 + line[
-                'rationale_label']  # rational_label
+            # label = None if set_type.startswith('test') else line['answer_label'] * 4 + line[
+            #     'rationale_label']  # rational_label
+            label = None if set_type.startswith('test') else (line['answer_label'], line[
+                'rationale_label'])  # rational_label
 
             img_key = line['annot_id']  # img_key = line['img_id']
             q_id = int(line['annot_id'].split('-')[-1])  # int(line['q_id']) if set_type.startswith('test') else 0
