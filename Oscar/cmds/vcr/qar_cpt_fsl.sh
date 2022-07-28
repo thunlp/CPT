@@ -16,4 +16,3 @@ do
         done
 done
 
- bash cmds/vcr/qar_cpt_fsl.sh 1 vcr_qar cpt ;   bash cmds/vcr/qar_pt_fsl.sh 1 vcr_qar pt
