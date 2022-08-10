@@ -109,9 +109,9 @@ class GQADataset(Dataset):
                     sequence_a_segment_id=0, sequence_b_segment_id=1,
                     cls_token_segment_id=1, pad_token_segment_id=0,
                     mask_padding_with_zero=True):
-        img_name, od_labels, img_feat, rects = self.get_img_feature(example)
+        text_a, img_name, od_labels, img_feat, rects = self.get_img_feature(example)
 
-        tokens_a = self.tokenizer.tokenize(example.text_a)
+        tokens_a = self.tokenizer.tokenize(text_a)
 
         tokens_b = None
         example.text_b = "[MASK]"
@@ -246,11 +246,12 @@ class GQADataset(Dataset):
                 new_question.append(colors[i] + " ")
             new_question.append(question[positions[-1]:])
             # print(example.text_a, " ".join(new_question) + "?")
-            example.text_a = "".join(new_question)
+            text_a = "".join(new_question)
         else:
             img_name, feat_str = self.img_feat_tsv.seek(self.imgid2feat[str(img_id)])
             feat_info = json.loads(feat_str)
             boxlist = feat_info["objects"]
+            text_a = example.text_a
         # im_feats
         boxlist_feats = [np.frombuffer(base64.b64decode(o['feature']), np.float32) for o in boxlist]
         boxlist_feats = torch.Tensor(np.stack(boxlist_feats))
@@ -263,7 +264,7 @@ class GQADataset(Dataset):
         # bboxes
         boxlist_rects = [o['rect'] for o in boxlist]
         rects = boxlist_rects
-        return img_name, od_labels, im_feats, rects
+        return text_a, img_name, od_labels, im_feats, rects
 
 
 def instance_bce_with_logits(logits, labels, reduction='mean'):
