@@ -556,7 +556,7 @@ def evaluate(args, model, eval_dataset=None, tokenizer=None, prefix=""):
     labels = eval_dataset.labels
     label_token_ids = [tokenizer.convert_tokens_to_ids(tokenizer.tokenize(lb))[0] for lb in labels]
     label_token_ids = torch.tensor(label_token_ids, dtype=torch.long)
-    answer_labels = [tokenizer.tokenize(lb)[0] for lb in labels]
+    answer_labels = [lb for lb in labels]
 
     results = []
     t_start = time.time()
