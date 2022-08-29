@@ -1,6 +1,6 @@
 # CPT
 
-This is the code for paper "[CPT: Colorful Prompt Tuning for Pre-trained Vision-Language Models](https://arxiv.org/abs/2109.11797)".
+This is the source code for paper "[CPT: Colorful Prompt Tuning for Pre-trained Vision-Language Models](https://arxiv.org/abs/2109.11797)".
 
 ## Recent Updates
 - [x] 2022.05.06 Initialize CPT for grounding, VRD, GQA, and VCR codes.
